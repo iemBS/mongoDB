@@ -1,0 +1,10 @@
+db.widgetArchiveTest.update(
+	{
+		"widgetGroupID":79
+	},
+	{
+		$set:{
+			"time.fallsOnInstance":1
+		}
+	}
+);

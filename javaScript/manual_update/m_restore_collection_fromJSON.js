@@ -1,0 +1,1 @@
+mongoimport --host [server ip/name] --port [port #] --username [user name] --password [password name] --collection [collection name]--db marketing --file [path to json file].json
