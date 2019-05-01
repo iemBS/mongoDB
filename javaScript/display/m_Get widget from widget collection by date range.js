@@ -1,13 +1,3 @@
--- how to connect to MongoDB collections
-- Using http://MongoLab.com
-- cred: superlumins, [other]
-- MongoDB version 2.6 (will be 3.0 on 150930)
-- open command window
-- navigate to this location on my computer:
-	C:\Program Files\MongoDB\Server\3.0\bin\
-- Connection command to run in R console:
-	mongo ds031701.mongolab.com:31701/dance_by_me -u <dbuser> -p <dbpassword>
-
 var filterDate
 var filterDateStart = ISODate('2016-06-02T00:00:00.000Z')
 var filterDateEnd = ISODate('2016-07-20T00:00:00.000Z')
