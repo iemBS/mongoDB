@@ -1,0 +1,4 @@
+db.widgetArchive.find( { "time.offsetFromGMT" : { $type : 1 } } ).forEach( function (x) {   
+  x."time.offsetFromGMT" = new String(x."time.offsetFromGMT"); // convert field to string
+  db.widgetArchive.save(x);
+});
