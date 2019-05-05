@@ -12,3 +12,10 @@ function incrementAWeek(UTCDate){
 		weekLaterDate.getUTCSeconds().toString() + "Z";
 	return weekLaterDateUTC
 }
+
+// Test incrementAWeek function
+var aDate = "2015-02-10T15:46:30Z"; // Need to enter a UTC Date
+print("Current UTC Time:");
+print (aDate);
+print("A week from Current UTC Time:");
+print(incrementAWeek(aDate));
