@@ -1,0 +1,22 @@
+ISODate("2015-07-11T03:30:00.000Z") -- stores a time of 11, July 2015 @3:30 am GMT
+ISODate("2015-07-11T03:30:00.000Z").getHours() -- Returns 20 because there is a time offset of 7 hours between GMT and Pacific. 20 (aka 8 pm) is this time from my Pacific perspective.
+ISODate("2015-07-11T03:30:00.000Z").getMinutes() -- Returns 30 as expected.
+ISODate("2015-07-11T03:30:00.000Z").getDate() -- Returns 10. This is my Pacific timezone perspective of this time. 
+ISODate("2015-07-11T03:30:00.000Z").getFullYear() -- Returns 2015. This is my Pacific timezone perspective. The GMT has the same number in its perspective. 
+ISODate("2015-07-11T03:30:00.000Z").getMonth() -- Returns 6. This is my Pacific perspectove and the months numbers start with 0 instead of 1. 
+ISODate("2015-07-11T03:30:00.000Z").getUTCHours() -- Returns 3. This is the GMT perspective. 
+ISODate("2015-07-11T03:30:00.000Z").getUTCDate() -- Returns 11. This is the GMT perspective. 
+ISODate("2015-07-11T03:30:00.000Z").getUTCFullYear() -- Returns 2015. Same as my timezome. 
+ISODate("2015-07-11T03:30:00.000Z").getUTCMonth() -- Returns 6. This is the GMT perspective and the same as my timezone. 
+var theDate = new Date("2015-07-11T03:30:00.000Z")
+theDate -- Returns the same date I entered and in the GMT timezone I specified. 
+theDate.toString() -- shows the date in my time and notes the current offset (with daylight savings time factored in) from GMT.
+var theDate = new Date("2015-07-11T03:30:00.000-0800")
+theDate -- Returns time from the perspective of 8 hours shifted (aka GMT timezone)
+theDate.toString() -- Returns time for the Pacific timezone perspective. This is not good because I want a constant time offset of 8 hours between the Seattle area and GMT. 
+theDate.toUTCString() -- Returns time for the GMT timezone perspective. 
+var theDate = new Date("2015-07-11T03:30:00.000") -- Takes input as GMT
+theDate -- shows a GMT time. 
+var theDate = new Date(2015,7,11,3,30) -- Takes input as Pacific perspective. 
+theDate -- This outputs a time in the GMT perspective that is 7 hours shifted from the input
+theDate.toTimeString() -- Outputs a time in Pacific perspective. 
