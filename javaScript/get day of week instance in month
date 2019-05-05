@@ -1,0 +1,17 @@
+
+// Get day of week instance in month. Like 2nd Wed or 3rd Thu.
+function dayOfWeekInstanceInMonth(UTCDate){
+	var date = new Date(UTCDate);
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var prefixes = ["1st", "2nd", "3rd", "4th", "5th"];
+	var weekNum = 0 | date.getDate() / 7;
+	weekNum = ( date.getDate() % 7 == 0 ) ? weekNum - 1 : weekNum;
+	return prefixes[weekNum] + " " + days[date.getDay()];	
+}
+
+// Test dayOfWeekInstanceInMonth function
+var aDate = "2015-02-17T15:46:30Z"; // Need to enter a UTC Date
+print("Current UTC Time:");
+print (aDate);
+print("Day of week instance:");
+print(dayOfWeekInstanceInMonth(aDate));
