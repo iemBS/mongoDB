@@ -1,0 +1,14 @@
+// Increment a date by a week. Ignore Daylight saving time.
+function incrementAWeek(UTCDate){
+	UTCDate = new Date(UTCDate);
+	var millisecondsInWeek = 604800000;
+	var weekLaterDate = new Date(UTCDate.getTime() + millisecondsInWeek);
+	var weekLaterDateUTC = 
+		weekLaterDate.getUTCFullYear().toString() + "-" + 
+		weekLaterDate.getUTCMonth().toString() + "-" + 
+		weekLaterDate.getUTCDate().toString() + "T" + 
+		weekLaterDate.getUTCHours().toString() + ":" + 
+		weekLaterDate.getUTCMinutes().toString() + ":" + 
+		weekLaterDate.getUTCSeconds().toString() + "Z";
+	return weekLaterDateUTC
+}
