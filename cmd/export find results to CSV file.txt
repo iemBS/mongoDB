@@ -1,0 +1,8 @@
+
+
+1. Navigate to where mongoexport command is. Could be at "C:\Program Files\MongoDB\Server\3.0\bin" on a windows OS.
+
+2. Run the below command with the bracketed parts filled in 
+
+   mongoexport --host [server] --port [port #]--db dance_by_me --collection [collection] --query {\"frequency.period\":\"yearly\"} --fields eventID,name,"time.start","time.end","frequency.occursOn",url --username [user name] --password [password] --type=csv --out C:\out.csv
+
