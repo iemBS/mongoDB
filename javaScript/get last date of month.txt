@@ -1,0 +1,56 @@
+// Get the last date of month
+function getLastDateOfMonth(UTCDate){
+	var newDate;
+	var newYear;
+	var newMonth;
+
+	UTCDate = new Date(UTCDate);
+
+	newYear = UTCDate.getUTCFullYear();
+	newMonth = UTCDate.getUTCMonth(); // Month numbers start with zero in JavaScript. So, month numbers go from 0 to 11
+
+	// increment month by 1 to get next month
+	newMonth = newMonth + 1;
+	if(newMonth > 12){
+		newMonth = 1;
+		newYear = newYear + 1;
+	}
+
+	// Increment month by 1 since month numbers going into Date constructor go from 1 to 12. 
+	newMonth = newMonth + 1;
+	if(newMonth > 12){
+		newMonth = 1;
+		newYear = newYear + 1;
+	}
+
+	// first date of next month
+	newDate = new Date(
+		newYear,
+		newMonth,
+		1,
+		0,
+		0,
+		0,
+		0
+	);
+
+	// Subtract one day to get last date in current month
+	newDate.setDate(newDate.getDate() - 1);
+
+	var newDateUTC = 
+		newDate.getFullYear().toString() + "-" + 
+		newDate.getMonth().toString() + "-" + 
+		newDate.getDate().toString() + "T" + 
+		newDate.getHours().toString() + ":" + 
+		newDate.getMinutes().toString() + ":" + 
+		newDate.getSeconds().toString() + "Z";
+
+	return newDateUTC;
+}
+
+// Test getLastDateOfMonth function
+var aDate = "2015-02-17T15:46:30Z"; // Need to enter a UTC Date
+print("Current UTC Time:");
+print (aDate);
+print("last day of month:");
+print(getLastDateOfMonth(aDate));
