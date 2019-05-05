@@ -1,0 +1,15 @@
+// Get WeekNumber in month. Like 2nd Week or 4th week. 
+function getWeekNumberInMonth(UTCDate){
+	var date = new Date(UTCDate);
+	var prefixes = ["1st", "2nd", "3rd", "4th", "5th"];
+	var weekNum = 0 | date.getDate() / 7;
+	weekNum = ( date.getDate() % 7 == 0 ) ? weekNum - 1 : weekNum;
+	return weekNum;
+}
+
+// Test getWeekNumberInMonth function
+var aDate = "2015-02-17T15:46:30Z"; // Need to enter a UTC Date
+print("Current UTC Time:");
+print (aDate);
+print("Day of week instance:");
+print(getWeekNumberInMonth(aDate));
