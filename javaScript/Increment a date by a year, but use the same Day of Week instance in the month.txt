@@ -1,0 +1,48 @@
+// Increment a date by a year, but use the same Day of Week instance in the month. Ignore Daylight saving time.
+function incrementAYear(){
+	 // Get Week number in the month
+	 var weekNumberInMonth = getWeekNumberInMonth(UTCDate);
+	 
+	 // Calculate new date
+	 var daysInFirstWeek;
+	 var daysInLastWeek;
+	 var newDate;
+	 If(weekNumberInMonth == 1){
+	 	daysInFirstWeek = (UTCDate.getDay() - firstDate.getDay()) + 1;
+		newDate = new Date(
+			firstDate.getFullYear(),
+			firstDate.getMonth() + 12,
+			daysInFirstWeek,
+			firstDate.getHours(),
+			firstDate.getMinutes(),
+			firstDate.getSeconds(),
+			firstDate.getMilliseconds()
+		);
+	 }
+	 Else If(weekNumberInMonth == 2){
+	 	daysInFirstWeek = (firstDate.getDay() -7) * -1;
+	 	daysInLastWeek = UTCDate.getDay() + 1
+		newDate = new Date(
+			firstDate.getFullYear(),
+			firstDate.getMonth() + 12,
+			daysInFirstWeek + daysInLastWeek,
+			firstDate.getHours(),
+			firstDate.getMinutes(),
+			firstDate.getSeconds(),
+			firstDate.getMilliseconds()
+		);
+	 }
+	 Else If(weekNumberInMonth >= 3){
+	 	daysInFirstWeek = (firstDate.getDay() -7) * -1;
+	 	daysInLastWeek = UTCDate.getDay() + 1
+		newDate = new Date(
+			firstDate.getFullYear(),
+			firstDate.getMonth() + 12,
+			daysInFirstWeek + ((weekNumberInMonth - 2) * 7) + daysInLastWeek,
+			firstDate.getHours(),
+			firstDate.getMinutes(),
+			firstDate.getSeconds(),
+			firstDate.getMilliseconds()
+		);
+	 }
+}
