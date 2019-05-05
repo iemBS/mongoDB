@@ -1,0 +1,33 @@
+// Return date of specified Matching Weekday instance
+function findMatchingDayOfWeekInstance(firstDateOfMonth,weekNumberInMonth,dayNumberInWeek){
+	
+	// Increment the date
+	var dateLoop = firstDateOfMonth;
+	var dayInWeekLoop;
+	var weekInMonthLoop = 1;
+	var newDate = new Date(firstDateOfMonth);
+
+	while(dateLoop <= getLastDateOfMonth(firstDateOfMonth)){
+		// Increment date by one day	
+		newDate.setDate(newDate.getDate() + 1);
+
+		// See if a matching date has been found.
+		if(getWeekNumberInMonth(newDate) == weekNumberInMonth And newDate.getDay() == dayNumberInWeek){
+			break;
+		}
+	}
+	return newDate;
+}
+
+// test findMatchingDayOfWeekInstance function
+var aDate = "2015-02-17T15:46:30Z"; // Need to enter a UTC Date
+print("Current UTC Time:");
+print (aDate);
+print("First day of next month:");
+print(getFirstDateOfNextMonth(aDate));
+print("Week Number in Month:");
+print(getWeekNumberInMonth);
+print("Day Of Week:");
+print(dayOfWeekInstanceInMonth(aDate));
+print("find matching day of week instance:");
+print(findMatchingDayOfWeekInstance(aDate));
