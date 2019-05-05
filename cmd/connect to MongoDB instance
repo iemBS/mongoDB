@@ -1,0 +1,1 @@
+mongo [MongoDB instance path] -u [user name] -p [password]
