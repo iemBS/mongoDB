@@ -1,4 +1,4 @@
-// Get WeekNumber in month. Like 2nd Week or 4th week. 
+// Get WeekNumber in month. Like 2nd or 4th. 
 function getWeekNumberInMonth(UTCDate){
 	var date = new Date(UTCDate);
 	var prefixes = ["1st", "2nd", "3rd", "4th", "5th"];
