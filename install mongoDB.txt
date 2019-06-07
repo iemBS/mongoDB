@@ -1,0 +1,10 @@
+Install MongoDB on Windows
+Note:
+  - Will install at "C:\Program Files\MongoDB\Server\3.0\bin" on windows. Need to go here to run mongo commands if environment variable is not yet
+Main Success Scenario:
+  1. [xxx: need to fill in]
+
+
+Install MongoDB on Ubunto Linux
+Main Success Scenario:
+  1. [xxx: need to fill in]
