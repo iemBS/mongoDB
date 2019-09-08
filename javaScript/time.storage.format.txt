@@ -1,0 +1,19 @@
+Format of stored time
+Notes:
+  -The JavaScript Date object measures in milliseconds since the Unix epoch.
+  -The Unix epoch is 00:00:00 UTC, 1 January 1970
+  -There is more flexibility with this date object than using ISODate.
+Main Success Scenario:
+  1. Add the below doc to your MongoDB database
+{
+ "start":{"$date":"2020-01-24T00:00:00Z"}, 		
+  "end":{"$date":"2020-01-26T00:00:00Z"}
+}
+  2. The doc after it is in the db 
+
+{ 
+  "_id" : { "$oid" : "5d74bed29c5361040820ad91" },
+  "start" : { "$date" : 1579824000000 }, 
+  "end" : { "$date" : 1579996800000}
+}
+ 
