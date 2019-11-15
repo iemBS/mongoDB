@@ -1,0 +1,5 @@
+Compare Doc Structure
+Notes
+  -xxx:fill in
+Main Success Scenario:
+  1.
