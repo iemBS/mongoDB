@@ -1,3 +1,5 @@
 Find doc with Existing Attribute
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/query/exists/
 Main Success Scenario:
   1. { attributeName: { $exists: 1 } }
