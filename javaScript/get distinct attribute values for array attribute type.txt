@@ -1,1 +1,9 @@
-xxx
+get distinct attribute values for array attribute type
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/method/db.collection.distinct/
+Main Success Scenario:
+  1. Get distinct values from array attribute across all documents
+    db.myCollection.distinct( "my attribute name")
+Alternatives
+  1a. Get distinct values from array sub attribute across all documents
+    1a1.db.myCollection.distinct( "attributeA.subAttributeB")
