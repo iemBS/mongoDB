@@ -1,0 +1,7 @@
+Get Distinct Attribute Values
+Main Success Scenario:
+  1. 
+    {
+        "distinct": "collectionName",
+        "key": "attribute name"
+    }
