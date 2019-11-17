@@ -1,0 +1,3 @@
+Filter on Sub Attribute
+Main Success Scenario:
+  1. {"attributeA.subAttribute": "sub attribute value"}
