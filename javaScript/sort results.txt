@@ -1,0 +1,10 @@
+Sort Results
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/meta/orderby/
+Main Success Scenario:
+  1.db.collection.find( { $query: {}, $orderby: { age : 1 } } )
+Alternatives:
+  1a. Order descending
+    1a1.db.collection.find( { $query: {}, $orderby: { age : -1 } } )
+  1b: Use _addSpecial function
+    1b1. db.collection.find()._addSpecial( "$orderby", { age : -1 } )
