@@ -1,1 +1,5 @@
-xxx
+Find doc with Missing Attribute
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/query/exists/
+Main Success Scenario:
+1. { attributeName: { $exists: 0} }
