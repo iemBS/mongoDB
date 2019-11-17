@@ -1,0 +1,8 @@
+Find doc with null Attribute Value
+Main Success Scenario:
+  1.
+    {
+        "attributeName": null
+    }
+Alternatives:
+  1a.
