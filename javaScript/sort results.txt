@@ -1,6 +1,7 @@
 Sort Results
 Notes:
   -Guidance @ https://docs.mongodb.com/manual/reference/operator/meta/orderby/
+  -Guidance @ https://docs.mongodb.com/manual/reference/method/cursor.sort/#cursor.sort
 Main Success Scenario:
   1.db.collection.find( { $query: {}, $orderby: { age : 1 } } )
 Alternatives:
