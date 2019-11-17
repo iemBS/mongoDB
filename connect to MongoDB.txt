@@ -1,0 +1,5 @@
+Connect to MongoDB
+Notes
+  -Guidance @ https://docs.mongodb.com/guides/server/drivers/
+Main Success Scenario:
+  1. xxx:fill in
