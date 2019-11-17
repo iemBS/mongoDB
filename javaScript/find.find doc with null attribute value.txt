@@ -1,4 +1,6 @@
 Find doc with null Attribute Value
+Notes:
+  -guidance @ https://docs.mongodb.com/v3.2/tutorial/query-for-null-fields/
 Main Success Scenario:
   1.
     {
