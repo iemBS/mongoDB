@@ -1,3 +1,5 @@
 Get Type of Attribute
+Notes
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/query/type/
 Main Success Scenario:
-  1.xxx:fill in
+  1. db.myCollection.find( { mongoDBType: { $type: "attributeName" } } )
