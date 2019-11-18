@@ -1,0 +1,14 @@
+Get Largset Doc in Collection
+Notes:
+  -Guidance @ https://stackoverflow.com/questions/16953282/find-largest-document-size-in-mongodb
+Main Success Scenario:
+  1. 
+    let max = 0, id = null;
+    db.myCollection.find().forEach(doc => {
+        const size = Object.bsonsize(doc); 
+        if(size > max) {
+            max = size;
+            id = doc._id;
+        } 
+    });
+    print(id, max);
