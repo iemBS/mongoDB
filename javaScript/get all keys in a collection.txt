@@ -1,0 +1,16 @@
+Get All Keys in a Collection
+Notes:
+  -Guidance @ https://stackoverflow.com/questions/2298870/get-names-of-all-keys-in-the-collection
+Main Success Scenario:
+  1. 
+    db.collection.aggregate([
+      { "$project": {
+        "data": { "$objectToArray": "$$ROOT" }
+      }},
+      { "$project": { "data": "$data.k" }},
+      { "$unwind": "$data" },
+      { "$group": {
+        "_id": null,
+        "keys": { "$addToSet": "$data" }
+      }}
+    ])
