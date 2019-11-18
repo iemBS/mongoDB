@@ -1,3 +1,7 @@
-get distinct attribute values from all docs
+get distinct values from all docs
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/method/db.collection.distinct/
+Precondition:
+  -Not for array values
 Main Success Scenario:
-  -xxx:fill in
+  1.db.myCollection.distinct( "key name" )
