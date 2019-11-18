@@ -1,4 +1,4 @@
-Get All Keys in a Collection
+Get All Key Names in a Collection
 Notes:
   -Guidance @ https://stackoverflow.com/questions/2298870/get-names-of-all-keys-in-the-collection
 Main Success Scenario:
