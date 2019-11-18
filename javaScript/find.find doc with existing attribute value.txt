@@ -1,1 +1,9 @@
-xxx
+Find Doc with Existing Attribute Value
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/method/db.collection.find/
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/query/in/
+Main Success Scenario:
+  1.db.myCollection.find( { attributeName:attributeValue } )
+Alternatives:
+  1a. Filter on a list of values
+    1a1. db.myCollection.find( { attributeName: { $in: [attributeValue1,attributeValue2] } } )
