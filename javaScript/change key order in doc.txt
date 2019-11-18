@@ -1,0 +1,9 @@
+Change Key Order in Doc
+Notes:
+  -Guidance @ https://stackoverflow.com/questions/5046835/mongodb-field-order-and-document-position-change-after-update
+  -key order changes in doc with when a value size of one of the key & value pairs changes
+Main Success Scenario:
+  1.xxx:fill in
+Alternatives:
+  Xa. Key order changed to be alphabetical
+    Xa1. xxx:fill in
