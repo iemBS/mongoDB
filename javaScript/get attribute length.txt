@@ -1,3 +1,20 @@
 Get Attribute Length
+Notes:
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/aggregation/strLenCP/
+  -$strLenCP returns string length
+  -Guidance @ https://docs.mongodb.com/manual/reference/operator/aggregation/strLenBytes/#exp._S_strLenBytes
 Main Success Scenario:
-  1.xxx:fill in
+  1.
+    db.myCollection.aggregate(
+      [
+        {
+          $project: {
+            "name": 1,
+            "length": { $strLenCP: "$name" }
+          }
+        }
+      ]
+    )
+Alternatives:
+  1a. Get number of bytes for an attribute value
+    1a1. use $strLenBytes
