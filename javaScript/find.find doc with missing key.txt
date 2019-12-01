@@ -1,5 +1,5 @@
-Find doc with Missing Attribute
+Find doc with Missing Key
 Notes:
   -Guidance @ https://docs.mongodb.com/manual/reference/operator/query/exists/
 Main Success Scenario:
-1. { attributeName: { $exists: 0} }
+1. { keyName: { $exists: 0} }
